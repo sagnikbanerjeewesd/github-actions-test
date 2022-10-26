@@ -9,9 +9,13 @@ jobs:
       - name: List files
         run: |
           pwd
-          ls -ltra
+          ls
       - name: Checkout
         uses: actions/checkout@v2.5.0
+      - name: List files after Checkout
+        run: |
+          pwd
+          ls
       - name: Simple JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1.1
